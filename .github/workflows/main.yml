@@ -25,15 +25,15 @@ jobs:
 
     - name: Compile the code
       run: mvn compile
-      working-directory: ./caminho/do/seu/projeto
+      working-directory: ./gerencia
 
     - name: Run unit tests
       run: mvn test
-      working-directory: ./caminho/do/seu/projeto
+      working-directory: ./gerencia
 
     - name: Create installers
       run: mvn package
-      working-directory: ./caminho/do/seu/projeto
+      working-directory: ./gerencia
 
   acceptance:
     runs-on: ubuntu-latest
@@ -52,11 +52,11 @@ jobs:
 
     - name: Run smoke tests
       run: mvn test -Dtest=*SmokeTest
-      working-directory: ./caminho/do/seu/projeto
+      working-directory: ./gerencia
 
     - name: Run acceptance tests
       run: mvn test -Dtest=*AcceptanceTest
-      working-directory: ./caminho/do/seu/projeto
+      working-directory: ./gerencia
 
   capacity:
     runs-on: ubuntu-latest
@@ -75,4 +75,4 @@ jobs:
 
     - name: Run capacity tests
       run: mvn test -Dtest=*CapacityTest
-      working-directory: .TrabalhoGerencia/gerencia/pom.xml
+      working-directory: ./gerencia
