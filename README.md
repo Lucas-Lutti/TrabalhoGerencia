@@ -39,9 +39,6 @@ mvn spring-boot:run
 mvn test
 \```
 
-### Documentação
-Acesse a documentação da API em `http://localhost:8080/swagger-ui.html`.
-
 ## Tecnologias Utilizadas
 - Java
 - Spring Boot
@@ -49,12 +46,6 @@ Acesse a documentação da API em `http://localhost:8080/swagger-ui.html`.
 - JUnit
 - RestAssured
 - Docker
-
-## Código Fonte
-O código fonte do projeto está disponível no GitHub. Para clonar o repositório:
-\```
-git clone <URL_DO_REPOSITORIO>
-\```
 
 ## Testes
 O projeto inclui testes unitários, de integração e de aceitação para garantir a qualidade do código. Os testes podem ser executados com o comando:
@@ -93,4 +84,6 @@ git push origin minha-feature
 \```
 5. Crie um Pull Request.
 
+## Licença
+Este projeto não possui um licenciamento específico. Para mais informações sobre os termos de uso e distribuição do software, por favor, entre em contato com o autor.
 
