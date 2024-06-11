@@ -20,10 +20,10 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '21'
-        distribution: 'adopt'
+        distribution: 'temurin'
         cache: 'maven'
 
-    - name: Set up Maven repository cache
+    - name: Cache Maven repository
       uses: actions/cache@v2
       with:
         path: ~/.m2/repository
@@ -62,10 +62,10 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '21'
-        distribution: 'adopt'
+        distribution: 'temurin'
         cache: 'maven'
 
-    - name: Set up Maven repository cache
+    - name: Cache Maven repository
       uses: actions/cache@v2
       with:
         path: ~/.m2/repository
@@ -93,10 +93,10 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '21'
-        distribution: 'adopt'
+        distribution: 'temurin'
         cache: 'maven'
 
-    - name: Set up Maven repository cache
+    - name: Cache Maven repository
       uses: actions/cache@v2
       with:
         path: ~/.m2/repository
