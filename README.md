@@ -25,7 +25,7 @@ A arquitetura do sistema é baseada em uma API RESTful, desenvolvida em Java uti
 ## Instruções de Uso
 
 ### Configuração do Ambiente
-1. Certifique-se de ter o JDK 11+ instalado.
+1. Certifique-se de ter o JDK 21+ instalado.
 2. Instale o Maven.
 3. Clone o repositório:
 \```
