@@ -23,36 +23,20 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    - name: Cache Maven repository
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-
     - name: Compile the code
       run: mvn compile
       working-directory: ./gerencia
 
     - name: Run unit tests
-      run: mvn test -Dtest=PacienteTest
+      run: mvn test
       working-directory: ./gerencia
 
-    - name: Run integration tests
-      run: mvn test -Dtest=PacienteRepositoryTest
-      working-directory: ./gerencia
-
-    - name: Run smoke tests
-      run: mvn test -Dtest=SmokeTest
-      working-directory: ./gerencia
-
-    - name: Run acceptance tests
-      run: mvn test -Dtest=AcceptanceTest
+    - name: Package the application
+      run: mvn package
       working-directory: ./gerencia
 
     - name: Upload test results
-      if: always()
+      if: failure()
       uses: actions/upload-artifact@v2
       with:
         name: test-results
