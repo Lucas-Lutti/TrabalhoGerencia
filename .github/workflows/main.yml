@@ -23,6 +23,14 @@ jobs:
         distribution: 'adopt'
         cache: 'maven'
 
+    - name: Set up Maven repository cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
     - name: Compile the code
       run: mvn compile
       working-directory: ./gerencia
@@ -36,7 +44,7 @@ jobs:
       working-directory: ./gerencia
 
     - name: Upload test results
-      if: failure()
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: test-results
@@ -56,6 +64,14 @@ jobs:
         java-version: '21'
         distribution: 'adopt'
         cache: 'maven'
+
+    - name: Set up Maven repository cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
 
     - name: Run smoke tests
       run: mvn test -Dtest=*SmokeTest
@@ -79,6 +95,14 @@ jobs:
         java-version: '21'
         distribution: 'adopt'
         cache: 'maven'
+
+    - name: Set up Maven repository cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
 
     - name: Run capacity tests
       run: mvn test -Dtest=*CapacityTest
