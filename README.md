@@ -13,31 +13,6 @@ Este projeto consiste no desenvolvimento de uma API para gerenciar pacientes de 
 ## Arquitetura
 A arquitetura do sistema é baseada em uma API RESTful, desenvolvida em Java utilizando Spring Boot. A API expõe endpoints para as operações CRUD de gerenciamento de pacientes, bem como para cálculos específicos relacionados aos dados dos pacientes.
 
-### Diagrama de Classe
-\```
-+--------------------+
-|     Paciente       |
-+--------------------+
-| - id: Long         |
-| - nome: String     |
-| - sobrenome: String|
-| - sexo: char       |
-| - nascimento: char |
-| - idade: int       |
-| - altura: char     |
-| - peso: double     |
-| - cpf: String      |
-| - imc: double      |
-+--------------------+
-| + obterPesoIdeal() |
-| + calcularIMC()    |
-| + calcularIdade()  |
-| + obterSituacaoIMC()|
-| + obterCpfOfuscado()|
-| + validarCpf()     |
-+--------------------+
-\```
-
 ## Endpoints da API
 \```
 - `GET /api/v1/pacientes/all`: Obtém uma lista de todos os pacientes.
