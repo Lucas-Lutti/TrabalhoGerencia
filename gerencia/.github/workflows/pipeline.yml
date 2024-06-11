@@ -25,12 +25,22 @@ jobs:
 
     - name: Compile the code
       run: mvn compile
+      working-directory: ./gerencia
 
     - name: Run unit tests
       run: mvn test
+      working-directory: ./gerencia
 
     - name: Create installers
       run: mvn package
+      working-directory: ./gerencia
+
+    - name: Upload test results
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: ./gerencia/target/surefire-reports/
 
   acceptance:
     runs-on: ubuntu-latest
@@ -49,9 +59,11 @@ jobs:
 
     - name: Run smoke tests
       run: mvn test -Dtest=*SmokeTest
+      working-directory: ./gerencia
 
     - name: Run acceptance tests
       run: mvn test -Dtest=*AcceptanceTest
+      working-directory: ./gerencia
 
   capacity:
     runs-on: ubuntu-latest
@@ -68,5 +80,6 @@ jobs:
         distribution: 'adopt'
         cache: 'maven'
 
-    - name: Run capacity tests (optional)
+    - name: Run capacity tests
       run: mvn test -Dtest=*CapacityTest
+      working-directory: ./gerencia
