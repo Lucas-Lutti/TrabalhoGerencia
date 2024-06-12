@@ -43,14 +43,13 @@ jobs:
     #   run: mvn test -Dtest=PacienteRepositoryTest -DfailIfNoTests=false
     #   working-directory: ./gerencia
 
-    - name: Static code analysis (optional)
-      run: mvn sonar:sonar
+    - name: Run smoke tests
+      run: mvn test -Dtest=SmokeTest -DfailIfNoTests=false
       working-directory: ./gerencia
-      if: ${{ github.event.inputs.perform_static_analysis == 'true' }}
 
-    - name: Create installers
-      run: mvn package
-      working-directory: ./gerencia
+    # - name: Run acceptance tests
+    #   run: mvn test -Dtest=AcceptanceTest -DfailIfNoTests=false
+    #   working-directory: ./gerencia
 
     - name: Upload test results
       if: always()
@@ -113,7 +112,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
 
-    - name: Run capacity tests (optional)
+    - name: Run capacity tests
       run: mvn test -Dtest=CapacityTest -DfailIfNoTests=false
       working-directory: ./gerencia
-      if: ${{ github.event.inputs.perform_capacity_tests == 'true' }}
