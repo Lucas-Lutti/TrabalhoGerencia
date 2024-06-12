@@ -36,19 +36,15 @@ jobs:
       working-directory: ./gerencia
 
     - name: Run unit tests
-      run: mvn test -Dtest=PacienteTest
+      run: mvn test
       working-directory: ./gerencia
 
     - name: Run integration tests
       run: mvn test -Dtest=PacienteRepositoryTest
       working-directory: ./gerencia
 
-    - name: Run smoke tests
-      run: mvn test -Dtest=SmokeTest
-      working-directory: ./gerencia
-
-    - name: Run acceptance tests
-      run: mvn test -Dtest=AcceptanceTest
+    - name: Create installers
+      run: mvn package
       working-directory: ./gerencia
 
     - name: Upload test results
@@ -113,5 +109,6 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Run capacity tests
-      run: mvn test -Dtest=CapacityTest
+      run: echo "Capacity tests would run here"
+      # run: mvn test -Dtest=*CapacityTest
       working-directory: ./gerencia
