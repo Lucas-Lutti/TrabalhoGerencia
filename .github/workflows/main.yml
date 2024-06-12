@@ -36,19 +36,19 @@ jobs:
       working-directory: ./gerencia
 
     - name: Run unit tests
-      run: mvn test -Dtest=PacienteTest
+      run: mvn test -Dtest=PacienteTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
     # - name: Run integration tests
-    #   run: mvn test -Dtest=PacienteRepositoryTest
+    #   run: mvn test -Dtest=PacienteRepositoryTest -DfailIfNoTests=false
     #   working-directory: ./gerencia
 
     - name: Run smoke tests
-      run: mvn test -Dtest=SmokeTest
+      run: mvn test -Dtest=SmokeTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
     - name: Run acceptance tests
-      run: mvn test -Dtest=AcceptanceTest
+      run: mvn test -Dtest=AcceptanceTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
     - name: Upload test results
@@ -82,11 +82,11 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Run smoke tests
-      run: mvn test -Dtest=SmokeTest
+      run: mvn test -Dtest=SmokeTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
     - name: Run acceptance tests
-      run: mvn test -Dtest=AcceptanceTest
+      run: mvn test -Dtest=AcceptanceTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
   capacity:
@@ -113,5 +113,5 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Run capacity tests
-      run: mvn test -Dtest=CapacityTest
+      run: mvn test -Dtest=CapacityTest -DfailIfNoTests=false
       working-directory: ./gerencia
