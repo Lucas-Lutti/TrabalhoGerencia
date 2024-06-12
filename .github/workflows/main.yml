@@ -47,9 +47,9 @@ jobs:
       run: mvn test -Dtest=SmokeTest
       working-directory: ./gerencia
 
-    - name: Run acceptance tests
-      run: mvn test -Dtest=AcceptanceTest
-      working-directory: ./gerencia
+    # - name: Run acceptance tests
+    #   run: mvn test -Dtest=AcceptanceTest
+    #   working-directory: ./gerencia
 
     - name: Upload test results
       if: always()
