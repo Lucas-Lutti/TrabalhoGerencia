@@ -11,3 +11,4 @@ public class SmokeTest {
         // Teste simples para verificar se o contexto da aplicação carrega corretamente
     }
 }
+
