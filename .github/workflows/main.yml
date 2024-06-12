@@ -43,19 +43,20 @@ jobs:
       run: mvn test -Dtest=PacienteRepositoryTest
       working-directory: ./gerencia
 
-    # Análise de código (opcional)
-    - name: Run code analysis (optional)
-      if: always()
-      run: echo "Code analysis step would go here"
-      # run: mvn sonar:sonar
-      # env:
-      #   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   SONAR_HOST_URL: https://sonarcloud.io
-
-    - name: Create installers
-      run: mvn package
+    - name: Run smoke tests
+      run: mvn test -Dtest=SmokeTest
       working-directory: ./gerencia
+
+    - name: Run acceptance tests
+      run: mvn test -Dtest=AcceptanceTest
+      working-directory: ./gerencia
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: ./gerencia/target/surefire-reports/
 
   acceptance:
     runs-on: ubuntu-latest
