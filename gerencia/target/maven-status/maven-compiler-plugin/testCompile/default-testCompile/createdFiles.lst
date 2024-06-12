@@ -1,5 +1,5 @@
 com/gerencia/clinica/SmokeTest.class
-com/gerencia/clinica/AcceptanceTest.class
 com/gerencia/clinica/CapacityTest.class
 com/gerencia/clinica/model/PacienteTest.class
 com/gerencia/clinica/repository/PacienteRepositoryTest.class
+com/gerencia/clinica/AcceptanceTest.class
