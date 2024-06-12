@@ -1,0 +1,5 @@
+com/gerencia/Main.class
+com/gerencia/clinica/repository/PacienteRepository.class
+com/gerencia/clinica/controller/PacienteController.class
+com/gerencia/clinica/model/Paciente.class
+com/gerencia/clinica/service/PacienteService.class

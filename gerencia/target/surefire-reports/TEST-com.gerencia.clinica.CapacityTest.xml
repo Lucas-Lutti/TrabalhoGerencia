@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gerencia.clinica.repository.PacienteRepositoryTest" time="0.262" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gerencia.clinica.CapacityTest" time="3.006" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -7,6 +7,9 @@
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="catalina.useNaming" value="false"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -28,6 +31,8 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
     <property name="surefire.real.class.path" value="/Users/lucashinova/Documents/Meus projetos/TrabalhoGerencia2API/TrabalhoGerencia/gerencia/target/surefire/surefirebooter-20240612134823109_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -44,10 +49,15 @@
     <property name="localRepository" value="/Users/lucashinova/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="/var/folders/g9/w5fsk_f91bx87hy3bgyd78xm0000gp/T/"/>
+    <property name="catalina.home" value="/private/var/folders/g9/w5fsk_f91bx87hy3bgyd78xm0000gp/T/tomcat.0.9194324195604010591"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="21.0.3"/>
     <property name="user.dir" value="/Users/lucashinova/Documents/Meus projetos/TrabalhoGerencia2API/TrabalhoGerencia/gerencia"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="9994"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="catalina.base" value="/private/var/folders/g9/w5fsk_f91bx87hy3bgyd78xm0000gp/T/tomcat.0.9194324195604010591"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/lucashinova/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode"/>
@@ -58,7 +68,146 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSaveAndFind" classname="com.gerencia.clinica.repository.PacienteRepositoryTest" time="0.243"/>
-  <testcase name="testUpdatePaciente" classname="com.gerencia.clinica.repository.PacienteRepositoryTest" time="0.002"/>
-  <testcase name="testDeletePaciente" classname="com.gerencia.clinica.repository.PacienteRepositoryTest" time="0.006"/>
+  <testcase name="testCapacity" classname="com.gerencia.clinica.CapacityTest" time="0.853">
+    <system-out><![CDATA[13:48:23.826 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.gerencia.clinica.CapacityTest]: CapacityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:48:23.877 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.gerencia.Main for test class com.gerencia.clinica.CapacityTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.1)
+
+2024-06-12T13:48:24.053-03:00  INFO 9994 --- [           main] com.gerencia.clinica.CapacityTest        : Starting CapacityTest using Java 21.0.3 with PID 9994 (started by lucashinova in /Users/lucashinova/Documents/Meus projetos/TrabalhoGerencia2API/TrabalhoGerencia/gerencia)
+2024-06-12T13:48:24.053-03:00  INFO 9994 --- [           main] com.gerencia.clinica.CapacityTest        : No active profile set, falling back to 1 default profile: "default"
+2024-06-12T13:48:24.390-03:00  INFO 9994 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12T13:48:24.415-03:00  INFO 9994 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
+2024-06-12T13:48:24.673-03:00  INFO 9994 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-06-12T13:48:24.679-03:00  INFO 9994 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-12T13:48:24.679-03:00  INFO 9994 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2024-06-12T13:48:24.727-03:00  INFO 9994 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-12T13:48:24.727-03:00  INFO 9994 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 570 ms
+2024-06-12T13:48:24.809-03:00  INFO 9994 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12T13:48:24.850-03:00  INFO 9994 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2024-06-12T13:48:24.851-03:00  INFO 9994 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-12T13:48:24.921-03:00  INFO 9994 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-12T13:48:24.925-03:00  INFO 9994 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12T13:48:24.933-03:00  INFO 9994 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-12T13:48:25.119-03:00  INFO 9994 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6a07e6ca
+2024-06-12T13:48:25.119-03:00  INFO 9994 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-12T13:48:25.266-03:00  INFO 9994 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-12T13:48:25.491-03:00  INFO 9994 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: alter table if exists paciente alter column imc set data type float(53)
+Hibernate: alter table if exists paciente alter column peso set data type float(53)
+2024-06-12T13:48:25.546-03:00  INFO 9994 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12T13:48:25.678-03:00  WARN 9994 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12T13:48:25.879-03:00  INFO 9994 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50791 (http) with context path ''
+2024-06-12T13:48:25.884-03:00  INFO 9994 --- [           main] com.gerencia.clinica.CapacityTest        : Started CapacityTest in 1.949 seconds (process running for 2.712)
+2024-06-12T13:48:26.405-03:00  INFO 9994 --- [o-auto-1-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12T13:48:26.406-03:00  INFO 9994 --- [o-auto-1-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-12T13:48:26.406-03:00  INFO 9994 --- [o-auto-1-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+Hibernate: select p1_0.id,p1_0.altura,p1_0.cpf,p1_0.idade,p1_0.imc,p1_0.nascimento,p1_0.nome,p1_0.peso,p1_0.sexo,p1_0.sobrenome from paciente p1_0
+]]></system-out>
+  </testcase>
 </testsuite>
