@@ -39,17 +39,17 @@ jobs:
       run: mvn test -Dtest=PacienteTest
       working-directory: ./gerencia
 
-    - name: Run integration tests
-      run: mvn test -Dtest=PacienteRepositoryTest
-      working-directory: ./gerencia
+    # - name: Run integration tests
+    #   run: mvn test -Dtest=PacienteRepositoryTest
+    #   working-directory: ./gerencia
 
     - name: Run smoke tests
       run: mvn test -Dtest=SmokeTest
       working-directory: ./gerencia
 
-    # - name: Run acceptance tests
-    #   run: mvn test -Dtest=AcceptanceTest
-    #   working-directory: ./gerencia
+    - name: Run acceptance tests
+      run: mvn test -Dtest=AcceptanceTest
+      working-directory: ./gerencia
 
     - name: Upload test results
       if: always()
