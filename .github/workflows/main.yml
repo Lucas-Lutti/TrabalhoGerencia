@@ -39,17 +39,17 @@ jobs:
       run: mvn test -Dtest=PacienteTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
-    # - name: Run integration tests
-    #   run: mvn test -Dtest=PacienteRepositoryTest -DfailIfNoTests=false
-    #   working-directory: ./gerencia
+    - name: Run integration tests
+      run: mvn test -Dtest=PacienteRepositoryTest -DfailIfNoTests=false
+      working-directory: ./gerencia
 
     - name: Run smoke tests
       run: mvn test -Dtest=SmokeTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
-    # - name: Run acceptance tests
-    #   run: mvn test -Dtest=AcceptanceTest -DfailIfNoTests=false
-    #   working-directory: ./gerencia
+    - name: Run acceptance tests
+      run: mvn test -Dtest=AcceptanceTest -DfailIfNoTests=false
+      working-directory: ./gerencia
 
     - name: Upload test results
       if: always()
@@ -85,9 +85,9 @@ jobs:
       run: mvn test -Dtest=SmokeTest -DfailIfNoTests=false
       working-directory: ./gerencia
 
-    # - name: Run acceptance tests
-    #   run: mvn test -Dtest=AcceptanceTest -DfailIfNoTests=false
-    #   working-directory: ./gerencia
+    - name: Run acceptance tests
+      run: mvn test -Dtest=AcceptanceTest -DfailIfNoTests=false
+      working-directory: ./gerencia
 
   capacity:
     runs-on: ubuntu-latest
