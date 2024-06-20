@@ -15,11 +15,11 @@ A arquitetura do sistema é baseada em uma API RESTful, desenvolvida em Java uti
 
 ## Endpoints da API
 
-GET /api/v1/pacientes/all: Obtém uma lista de todos os pacientes.
-GET /api/v1/pacientes/{id}: Obtém detalhes de um paciente específico.
-POST /api/v1/pacientes: Adiciona um novo paciente.
-PUT /api/v1/pacientes/{id}: Atualiza os detalhes de um paciente existente.
-DELETE /api/v1/pacientes/{id}: Remove um paciente do sistema.
+- GET /api/v1/pacientes/all: Obtém uma lista de todos os pacientes.
+- GET /api/v1/pacientes/{id}: Obtém detalhes de um paciente específico.
+- POST /api/v1/pacientes: Adiciona um novo paciente.
+- PUT /api/v1/pacientes/{id}: Atualiza os detalhes de um paciente existente.
+- DELETE /api/v1/pacientes/{id}: Remove um paciente do sistema.
 
 
 ## Instruções de Uso
