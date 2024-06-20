@@ -13,6 +13,34 @@ Este projeto consiste no desenvolvimento de uma API para gerenciar pacientes de 
 ## Arquitetura
 A arquitetura do sistema é baseada em uma API RESTful, desenvolvida em Java utilizando Spring Boot. A API expõe endpoints para as operações CRUD de gerenciamento de pacientes, bem como para cálculos específicos relacionados aos dados dos pacientes. A aplicação mobile utiliza Swift UIKit para fornecer uma interface interativa que permite aos usuários visualizar e gerenciar informações dos pacientes.
 
+
+## Separação de Tarefas
+
+### Frontend Mobile
+- Desenvolvimento da interface de usuário utilizando Swift UIKit.
+- Implementação de funcionalidades para visualização, adição e remoção de pacientes.
+- Integração com a API para realizar operações CRUD.
+- Testes e validação das funcionalidades no simulador.
+
+### API
+- Criação da API RESTful em Java com Spring Boot.
+- Implementação dos endpoints para gerenciamento de pacientes (CRUD).
+- Validação dos dados de entrada, incluindo CPF.
+- Cálculos de IMC, peso ideal e idade dos pacientes.
+- Testes unitários e de integração utilizando JUnit e RestAssured.
+
+### Integração de CI/CD no GitHub Actions
+- Configuração do pipeline de CI/CD no GitHub Actions.
+- Automação do build e testes da API em cada push.
+- Deploy contínuo da API em um ambiente de staging para validação.
+- Monitoramento e notificações de falhas no pipeline.
+
+### Criação de Contêiner no Docker para Produção
+- Escrita do Dockerfile para a API.
+- Construção da imagem Docker da API.
+- Criação do Docker Compose para orquestração dos contêineres.
+
+
 ## Endpoints da API
 
 - GET /api/v1/pacientes/all: Obtém uma lista de todos os pacientes.
